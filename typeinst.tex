@@ -89,13 +89,33 @@
 
 \section{Introduction}
 
-\section{Google Chrome Extensions}
+\subsection{Google Chrome Extensions}
 Google Chrome extensions\footnote{Google Chrome Extensions: \url{http://code.google.com/chrome/extensions/index.html}. Text adapted from the description to be found there.} are small software programs that can be installed to enrich the browsing experience with the Google Chrome browser. They are written using a combination of standard Web technologies, such as HTML, JavaScript, and CSS. Chrome extensions bundle all their files into a single file that gets usually (but not necessarily) distributed through the Chrome Web Store. There are several types of extensions, for this paper we focus on extensions based on so-called content scripts. Content scripts are JavaScript programs that run in the context of Web pages, similar to the Firefox Greasemonkey extension\footnote{Firefox Greasemonkey extension: \url{http://www.greasespot.net/}}. By using the standard Document Object Model (DOM), they can read or modify details of the Web pages a user visits. Examples of such modifications are, e.g., changing hyperlinks to remove potential @target="\_blank" attributes, or increasing the font size.
 
-\section{Google Analytics}
+\subsection{Google Analytics}
  
 \section{Twitter Swarm NLP Extension}
-With our Twitter Swarm NLP extension\footnote{\url{https://chrome.google.com/webstore/detail/dpbphenfafkflfmdlanimlemacankjol}}, 
+With our Twitter Swarm NLP extension\footnote{\url{https://chrome.google.com/webstore/detail/dpbphenfafkflfmdlanimlemacankjol}}, we inject JavaScript code via a content script into the Twitter.com homepage. The extension first checks if the user is logged in, and if so, retrieves the tweets of the logged-in user's timeline one-by-one, and performs NLP analysis via a remote NLP Web service on each of the tweets. The extracted entities are then displayed on the righthand-pane of the Twitter.com homepage, and sent to Google Analytics for further processing.
+
+\subsection{Twitter Swarm NLP Web Service}
+\subsection{Dealing With Extracted Entites On the Client Side}
+\subsection{Dealing With Extracted Entites On the Google Analytics Side}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.6\linewidth]{danbri.png}
+  \caption{Screenshot of the extracted entites of a particular tweet as displayed by the Twitter Swarm NLP Extension.}
+  \label{fig:dataflow}
+\end{figure}
+
+\section{Related Work}
+\subsection{Linked Open Social Signals (TWARQL)}
+@ToDo Arnaud
+\url{http://knoesis.wright.edu/library/download/paper-wi10-MPKS.pdf} \url{http://wiki.knoesis.org/index.php/Twarql}
+\subsection{Twopular}
+@ToDo Arnaud
+\url{http://twopular.com/tag#about}
+\section{Conclusion}
 
 
 %%%%%%%%%%%%%%%%%%%%%%
