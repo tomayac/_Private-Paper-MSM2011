@@ -98,13 +98,14 @@ Google Chrome extensions\footnote{Google Chrome Extensions: \url{http://code.goo
 With our Twitter Swarm NLP extension\footnote{\url{https://chrome.google.com/webstore/detail/dpbphenfafkflfmdlanimlemacankjol}}, we inject JavaScript code via a content script into the Twitter.com homepage. The extension first checks if the user is logged in, and if so, retrieves the tweets of the logged-in user's timeline one-by-one, and performs NLP analysis via a remote NLP Web service on each of the tweets. The extracted entities are then displayed on the righthand-pane of the Twitter.com homepage, and sent to Google Analytics for further processing.
 
 \subsection{Twitter Swarm NLP Web Service}
+We have created a wrapper NLP Web service that merges results from existing third-party NLP Web services, namely from OpenCalais\footnote{\url{http://www.opencalais.com/}}, Zemanta\footnote{\url{http://www.opencalais.com/}}, AlchemyAPI\footnote{\url{http://www.alchemyapi.com/}}, and DBpedia Spotlight\footnote{\url{http://dbpedia.org/spotlight}}.
 \subsection{Dealing With Extracted Entites On the Client Side}
 \subsection{Dealing With Extracted Entites On the Google Analytics Side}
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.6\linewidth]{danbri.png}
-  \caption{Screenshot of the extracted entites of a particular tweet as displayed by the Twitter Swarm NLP Extension.}
+  \includegraphics[width=0.95\linewidth]{combined.png}
+  \caption{Left: Screenshot of the extracted entites of a particular tweet as displayed by the Twitter Swarm NLP Extension. Right: Test.}
   \label{fig:dataflow}
 \end{figure}
 
