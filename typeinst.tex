@@ -59,7 +59,7 @@
 \title{A Tweet Consumer's Look At Twitter Through Linked Data Goggles Via Google Analytics}
 
 % a short form should be given in case it is too long for the running head
-\titlerunning{A Tweet Consumer's Look At Twitter Through Linked Data Goggles Via Google Analytics}
+\titlerunning{A Tweet Consumer's Look At Twitter}
 
 % the name(s) of the author(s) follow(s) next
 %
@@ -84,7 +84,7 @@
 \maketitle
 
 \begin{abstract}
-
+In this paper, we discuss the possibility to reflect Twitter's current trends by having a close look at the consumer's -- i.e reader's -- point of view. Our experimentation architecture takes advantage of the possibility to build a client-side browser extension for the initial data fetching. Several web services are used after that to enhance, store, analyse tweets and compute trends.
 \end{abstract}
 
 \section{Introduction}
@@ -110,14 +110,26 @@ We have created a wrapper NLP Web service that merges results from existing thir
 \end{figure}
 
 \section{Related Work}
-\subsection{Linked Open Social Signals (TWARQL)}
-@ToDo Arnaud
-\url{http://knoesis.wright.edu/library/download/paper-wi10-MPKS.pdf} \url{http://wiki.knoesis.org/index.php/Twarql}
-\subsection{Twopular}
-@ToDo Arnaud
-\url{http://twopular.com/tag#about}
-\section{Conclusion}
 
+\subsection{Linked Open Social Signals (TWARQL)}
+Previous work of Pablo N. Mendes, Alexandre Passant, Pavan Kapanipathi and Amit P. Sheth\footnote{\url{http://knoesis.wright.edu/library/download/paper-wi10-MPKS.pdf}} have shown a possible implementation of real-time information both pushed and pulled from Twitter.
+TWARQL\footnote{\url{http://wiki.knoesis.org/index.php/Twarql}} is based on a distributed architectures which features: 
+\begin{itemize}
+\item a client-side application which typically a Javacript-enabled web browser
+\item a "Social Sensor Server" to receive tweets and filter them according to the user's request. It is worth noting here that TWARQL filtering is based on web-semantic technologies: SPARQL, hash-tag resolution through glossaries and LOD cloud are used to extract the highest amount of information possible from the Twitter Streaming API.
+\item a number of distributed PuSH hubs which update clients as information flows (pushed-information model)
+\item another server -- "Semantic Publisher" -- registers user's interest and updates the hubs. The updated information is eventually displayed on the user's screen.
+\end{itemize}
+
+\subsection{Twopular}
+
+Twopular\footnote{Twopular website: \url{http://twopular.com/}} is a work of Martin Dudek. It aims at analysing current Twitter trends.
+Since March 2008, Twopular takes advantage of OpenCalais services to extract entities from tweets retrieved from the Twitter Streaming API. \linebreak
+Semantic entities are then used to reflect Twitter's current "trends".
+
+\section{Conclusion}
+As seen in the Related Work section, semantic analysis of a (real-time) Twitter stream is not new and has been successfully exploited to analyse tweets produced by the Twitter community.
+What we propose here is an insight into tweets consumers' interests to provide a more accurate view of Twitter trends.
 
 %%%%%%%%%%%%%%%%%%%%%%
 %%%  Bibliography  %%%
