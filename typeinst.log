@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  4 MAR 2011 13:27
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  4 MAR 2011 17:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -148,12 +148,20 @@ Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen124
+\WF@size=\dimen125
+\c@WF@wrappedlines=\count115
+\WF@box=\box54
+\WF@everypar=\toks19
+Package: wrapfig 2003/01/31  v 3.6
+)
 (/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks19
+\KV@toks@=\toks20
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -168,10 +176,10 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
-\Gread@gobject=\count115
+\Gread@gobject=\count116
 ))
-\Gin@req@height=\dimen124
-\Gin@req@width=\dimen125
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
@@ -245,64 +253,71 @@ Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count116
-\lst@gtempboxa=\box54
-\lst@token=\toks20
-\lst@length=\count117
-\lst@currlwidth=\dimen126
-\lst@column=\count118
-\lst@pos=\count119
-\lst@lostspace=\dimen127
-\lst@width=\dimen128
-\lst@newlines=\count120
-\lst@lineno=\count121
-\lst@maxwidth=\dimen129
+\lst@mode=\count117
+\lst@gtempboxa=\box55
+\lst@token=\toks21
+\lst@length=\count118
+\lst@currlwidth=\dimen128
+\lst@column=\count119
+\lst@pos=\count120
+\lst@lostspace=\dimen129
+\lst@width=\dimen130
+\lst@newlines=\count121
+\lst@lineno=\count122
+\lst@maxwidth=\dimen131
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count122
-\lst@skipnumbers=\count123
-\lst@framebox=\box55
+\c@lstnumber=\count123
+\lst@skipnumbers=\count124
+\lst@framebox=\box56
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-(./typeinst.aux)
+(./typeinst.aux
+
+LaTeX Warning: Label `fig:dataflow' multiply defined.
+
+
+LaTeX Warning: Label `fig:dataflow' multiply defined.
+
+)
 \openout1 = `typeinst.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 55.
  (/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    ... okay on input line 55.
 
 (/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count124
-\scratchdimen=\dimen130
-\scratchbox=\box56
-\nofMPsegments=\count125
-\nofMParguments=\count126
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count127
-\MPscratchDim=\dimen131
-\MPnumerator=\count128
-\everyMPtoPDFconversion=\toks22
+\scratchcounter=\count125
+\scratchdimen=\dimen132
+\scratchbox=\box57
+\nofMPsegments=\count126
+\nofMParguments=\count127
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen133
+\MPnumerator=\count129
+\everyMPtoPDFconversion=\toks23
 ) (/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2010/04/01 v0.9 Utility functions of pdfTeX for LuaTeX (HO)
 
@@ -349,13 +364,13 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count129
-LaTeX Font Info:    Try loading font information for U+msa on input line 84.
+\c@lstlisting=\count130
+LaTeX Font Info:    Try loading font information for U+msa on input line 85.
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 84.
+LaTeX Font Info:    Try loading font information for U+msb on input line 85.
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -363,35 +378,50 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 
 {/usr/local/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<combined.png, id=14, 815.045pt x 305.14pt>
+<twitter-trends.png, id=14, 162.6075pt x 269.005pt>
+File: twitter-trends.png Graphic file (type png)
+ <use twitter-trends.png>
+[2
+
+ <./twitter-trends.png (PNG copy)>]
+<combined.png, id=18, 815.045pt x 305.14pt>
 File: combined.png Graphic file (type png)
- <use combined.png>
+ <use combined.png> [3 <./combined.png (PNG copy)>] <twopular-trends.png, id=22
+, 1064.97874pt x 581.17125pt>
+File: twopular-trends.png Graphic file (type png)
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<use twopular-trends.png>
+Underfull \hbox (badness 2846) in paragraph at lines 153--155
+\OT1/cmr/m/n/10 tract en-ti-ties from tweets re-trieved from the Twit-ter Strea
+m-ing API.
+ []
 
-[2] (./typeinst.bbl) [3 <./combined.png (PNG copy)>] (./typeinst.aux) ) 
+[4 <./twopular-trends.png (PNG copy)>] (./typeinst.bbl) [5] (./typeinst.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3695 strings out of 493747
- 51798 string characters out of 3143546
- 110988 words of memory out of 3000000
- 6939 multiletter control sequences out of 15000+200000
+ 3771 strings out of 493747
+ 52868 string characters out of 3143546
+ 111227 words of memory out of 3000000
+ 7009 multiletter control sequences out of 15000+200000
  10780 words of font info for 42 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  38i,9n,32p,1178b,357s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/lo
-cal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/loc
-al/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/loca
-l/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/
-texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/te
-xlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texli
-ve/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
-2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/201
-0/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2010/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on typeinst.pdf (3 pages, 192917 bytes).
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
+usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/l
+ocal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
+l/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/t
+exlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/tex
+live/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on typeinst.pdf (5 pages, 379879 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 59 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
