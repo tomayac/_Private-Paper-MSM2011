@@ -84,10 +84,13 @@
 \maketitle
 
 \begin{abstract}
-In this paper, we discuss the possibility to reflect Twitter's current trends by having a close look at the consumer's -- i.e reader's -- point of view. Our experimentation architecture takes advantage of the possibility to build a client-side browser extension for the initial data fetching. Several web services are used after that to enhance, store, analyse tweets and compute trends.
+Twitter Trends\footnote{\url{http://blog.twitter.com/2008/09/twitter-trends-tip.html}} allows for a global or local view on ``what's happening in my world right now" from a tweet producers' point of view. In this paper, we discuss the possibility to complete the functionality provided by Twitter Trends by having a closer look at the other side: the tweet consumers' -- i.e., readers' -- point of view. While Twitter Trends works by analyzing the frequency of terms and their velocity of appearence in tweets being written, our approach is based on the popularity of extracted named entities (in the sense of Linked Data) in tweets being read. Our experimentation architecture takes advantage of the possibility to use a client-side browser extension to harvest and dissect tweets from users' timelines, i.e., tweets supposed to be read. Named entities are extracted using several third-party Natural Language Processing (NLP) Web services in parallel, and are then reported to Google Analytics, which is used to store, analyze, and compute trends by pivoting Analytics data, e.g., users' geographic location, with the recorded named entities.
 \end{abstract}
 
 \section{Introduction}
+
+\subsection{Twitter Trends}
+http://blog.twitter.com/2010/12/to-trend-or-not-to-trend.html
 
 \subsection{Google Chrome Extensions}
 Google Chrome extensions\footnote{Google Chrome Extensions: \url{http://code.google.com/chrome/extensions/index.html}. Text adapted from the description to be found there.} are small software programs that can be installed to enrich the browsing experience with the Google Chrome browser. They are written using a combination of standard Web technologies, such as HTML, JavaScript, and CSS. Chrome extensions bundle all their files into a single file that gets usually (but not necessarily) distributed through the Chrome Web Store. There are several types of extensions, for this paper we focus on extensions based on so-called content scripts. Content scripts are JavaScript programs that run in the context of Web pages, similar to the Firefox Greasemonkey extension\footnote{Firefox Greasemonkey extension: \url{http://www.greasespot.net/}}. By using the standard Document Object Model (DOM), they can read or modify details of the Web pages a user visits. Examples of such modifications are, e.g., changing hyperlinks to remove potential @target="\_blank" attributes, or increasing the font size.
@@ -112,7 +115,7 @@ We have created a wrapper NLP Web service that merges results from existing thir
 \section{Related Work}
 
 \subsection{Linked Open Social Signals (TWARQL)}
-Previous work of Pablo N. Mendes, Alexandre Passant, Pavan Kapanipathi and Amit P. Sheth\footnote{\url{http://knoesis.wright.edu/library/download/paper-wi10-MPKS.pdf}} have shown a possible implementation of real-time information both pushed and pulled from Twitter.
+Previous work of Mendes et al.~\cite{Mendes:LOSS} have shown a possible implementation of real-time information both pushed and pulled from Twitter.
 TWARQL\footnote{\url{http://wiki.knoesis.org/index.php/Twarql}} is based on a distributed architectures which features: 
 \begin{itemize}
 \item a client-side application which typically a Javacript-enabled web browser
@@ -128,6 +131,8 @@ Since March 2008, Twopular takes advantage of OpenCalais services to extract ent
 Semantic entities are then used to reflect Twitter's current "trends".
 
 \section{Conclusion}
+Contributions: time filters (via Analytics), geographical pivoting (via Analytics)
+
 As seen in the Related Work section, semantic analysis of a (real-time) Twitter stream is not new and has been successfully exploited to analyse tweets produced by the Twitter community.
 What we propose here is an insight into tweets consumers' interests to provide a more accurate view of Twitter trends.
 
