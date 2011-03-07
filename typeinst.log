@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  4 MAR 2011 17:26
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  7 MAR 2011 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -386,29 +386,27 @@ File: twitter-trends.png Graphic file (type png)
  <./twitter-trends.png (PNG copy)>]
 <combined.png, id=18, 815.045pt x 305.14pt>
 File: combined.png Graphic file (type png)
- <use combined.png> [3 <./combined.png (PNG copy)>] <twopular-trends.png, id=22
+ <use combined.png> [3 <./combined.png (PNG copy)>] <twopular-trends.png, id=23
 , 1064.97874pt x 581.17125pt>
 File: twopular-trends.png Graphic file (type png)
 
 <use twopular-trends.png>
-Underfull \hbox (badness 2846) in paragraph at lines 153--155
-\OT1/cmr/m/n/10 tract en-ti-ties from tweets re-trieved from the Twit-ter Strea
-m-ing API.
- []
 
-[4 <./twopular-trends.png (PNG copy)>] (./typeinst.bbl) [5] (./typeinst.aux)
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./typeinst.bbl [4]) [5 <./twopular-trends.png (PNG copy)>] (./typeinst.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3771 strings out of 493747
- 52868 string characters out of 3143546
+ 3773 strings out of 493747
+ 52887 string characters out of 3143546
  111227 words of memory out of 3000000
- 7009 multiletter control sequences out of 15000+200000
- 10780 words of font info for 42 fonts, out of 3000000 for 9000
+ 7010 multiletter control sequences out of 15000+200000
+ 10947 words of font info for 43 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,9n,32p,1178b,357s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,9n,32p,1184b,357s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
@@ -417,11 +415,12 @@ r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/l
 ocal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
 l/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/t
 exlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/tex
-live/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on typeinst.pdf (5 pages, 379879 bytes).
+live/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texli
+ve/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on typeinst.pdf (5 pages, 392545 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

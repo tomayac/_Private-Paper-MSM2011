@@ -72,7 +72,7 @@
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
 \institute{Google Germany GmbH, ABC-Str. 19, 20354 Hamburg, Germany\\
-\url{{tomac|arnaudb}@google.com}}
+\url{{tomac, arnaudb}@google.com}}
 
 %
 % NB: a more complex sample for affiliations and the mapping to the
@@ -85,7 +85,7 @@
 \maketitle
 
 \begin{abstract}
-Twitter Trends\footnote{\url{http://blog.twitter.com/2008/09/twitter-trends-tip.html}} allows for a global or local view on ``what's happening in my world right now" from a tweet producers' point of view. In this paper, we discuss the possibility to complete the functionality provided by Twitter Trends by having a closer look at the other side: the tweet consumers' -- i.e., readers' -- point of view. While Twitter Trends works by analyzing the frequency of terms and their velocity of appearance in tweets being written, our approach is based on the popularity of extracted named entities (in the sense of Linked Data) in tweets being read. Our experimentation architecture takes advantage of the possibility to use a client-side browser extension to harvest and dissect tweets from users' timelines, i.e., tweets supposed to be read. Named entities are extracted using several third-party Natural Language Processing (NLP) Web services in parallel, and are then reported to Google Analytics, which is used to store, analyze, and compute trends by pivoting Analytics data, e.g., users' geographic location, with the recorded named entities.
+Twitter Trends\footnote{\url{http://blog.twitter.com/2008/09/twitter-trends-tip.html}} allows for a global or local view on ``what's happening in my world right now" from a tweet producers' point of view. In this paper, we discuss the possibility to complete the functionality provided by Twitter Trends by having a closer look at the other side: the tweet consumers' -- i.e., readers' -- point of view. While Twitter Trends works by analyzing the frequency of terms and their velocity of appearance in tweets being written, our approach is based on the popularity of extracted named entities (in the sense of Linked Data) in tweets being read. Our experimentation architecture takes advantage of the possibility to use a client-side browser extension to harvest and dissect tweets from users' timelines, i.e., tweets supposed to be read. Named entities are extracted via several third-party Natural Language Processing (NLP) Web services in parallel, and are then reported to Google Analytics, which is used to store, analyze, and compute trends by pivoting Analytics data, e.g., users' geographic location, with the recorded named entities.
 \end{abstract}
 
 \section{Introduction}
@@ -93,22 +93,22 @@ Twitter Trends\footnote{\url{http://blog.twitter.com/2008/09/twitter-trends-tip.
 \subsection{Twitter Trends}
 
 Twitter Trends was introduced by Twitter during the summer of 2008. This service was implemented to reflect ``what's happening in my world right now" on the micro-blogging platform.
-To compute trends, Twitter uses an algorithm which analyzes the words and hashtags in tweets. Though kept secret, we know\footnote{\url{http://blog.twitter.com/2010/12/to-trend-or-not-to-trend.html}} that this algorithm considers 3 main characteristics of a word/hashtag to determine if it is part of a `trend':
+To compute trends, Twitter uses an algorithm which analyzes the words and hashtags in tweets. Although the concrete implementation details are kept secret, it is known\footnote{\url{http://blog.twitter.com/2010/12/to-trend-or-not-to-trend.html}} that the algorithm considers three main characteristics of a word/hashtag to determine if it is part of a ``trend":
 \clearpage
 \begin{itemize}
-\item the quantity, i.e, the absolute number of appearance of a given word/hashtag among all users' tweets
-\item the velocity, i.e, the frequency of appearance of that word/hashtag. The higher the frequency, the more popular the word/hashtag
-\item the newness, e.g, the hash tag \#ipad2 will be given priority over an old and generic tag as \#awesome to be featured as `trend'. The freshness of trends is also assured by the fact that the frequency is computed over recent set of tweets, although we have no clue of the exact computation period -- Twitter keeps this information secret.
+\item the quantity, i.e, the absolute number of appearances of a given word/hashtag among all users' tweets.
+\item the velocity, i.e, the frequency of appearance of that word/hashtag. The higher the frequency, the more popular the word/hashtag.
+\item the newness, e.g, the (at the time of writing brand new) hashtag \#ipad2 will be given priority over an old and generic tag like \#awesome to be featured as ``trend". The freshness of trends is also assured by the fact that the frequency is computed over a recent set of tweets, although we have no further details of the exact computation period -- Twitter keeps this information secret.
 \end{itemize}
 \begin{figure}[h!]
   \centering
     \includegraphics[width=0.17\linewidth]{twitter-trends.png}
-  \caption{Screenshot of Twitter Trends.}
+  \caption{Screenshot of Twitter Trends as of Friday, March 4, 2011, 4pm CET.}
   \label{fig:dataflow}
 \end{figure}
 
 \subsection{Google Chrome Extensions}
-Google Chrome extensions\footnote{Google Chrome Extensions: \url{http://code.google.com/chrome/extensions/index.html}. Text adapted from the description to be found there.} are small software programs that can be installed to enrich the browsing experience with the Google Chrome browser. They are written using a combination of standard Web technologies, such as HTML, JavaScript, and CSS. Chrome extensions bundle all their files into a single file that gets usually (but not necessarily) distributed through the Chrome Web Store. There are several types of extensions, for this paper we focus on extensions based on so-called content scripts. Content scripts are JavaScript programs that run in the context of Web pages, similar to the Firefox Greasemonkey extension\footnote{Firefox Greasemonkey extension: \url{http://www.greasespot.net/}}. By using the standard Document Object Model (DOM), they can read or modify details of the Web pages a user visits. Examples of such modifications are, e.g., changing hyperlinks to remove potential @target="\_blank" attributes, or increasing the font size.
+Google Chrome extensions\footnote{Google Chrome Extensions: \url{http://code.google.com/chrome/extensions/index.html}. Text partly adapted from the description to be found there.} are small software programs that can be installed to enrich the browsing experience with the Google Chrome browser. They are written using a combination of standard Web technologies, such as HTML, JavaScript, and CSS. Chrome extensions bundle all their resources into a single file that gets usually (but not necessarily) distributed through the Chrome Web Store. There are several types of extensions, for this paper we focus on extensions based on so-called content scripts. Content scripts are JavaScript programs that run in the context of Web pages, similar to the Firefox Greasemonkey extension\footnote{Firefox Greasemonkey extension: \url{http://www.greasespot.net/}}. By using the standard Document Object Model (DOM), they can read or modify details of the Web pages a user visits. Examples of such modifications are, e.g., changing hyperlinks to remove potential @target="\_blank" attributes, or increasing the font size.
 
 \subsection{Google Analytics}
  
@@ -122,36 +122,34 @@ We have created a wrapper NLP Web service that merges results from existing thir
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.95\linewidth]{combined.png}
-  \caption{Left: Screenshot of the extracted entites of a particular tweet as displayed by the Twitter Swarm NLP Extension. Right: Test.}
+  \includegraphics[width=1.0\linewidth]{combined.png}
+  \caption{Left: Screenshot of the extracted entites of a particular tweet as displayed by the Twitter Swarm NLP Extension. Right: Entities pivoted by country. The entity represented by the URL \texttt{http://dbpedia.org/resource/Lybia} appeared in 9 tweets on timelines of users located in Finland (red borders in the screenshot).}
   \label{fig:dataflow}
 \end{figure}
 
 \section{Related Work}
 
 \subsection{Linked Open Social Signals (TWARQL)}
-Previous work of Mendes et al.~\cite{Mendes:LOSS} has shown a possible implementation of real-time information both pushed and pulled from Twitter.
-TWARQL\footnote{\url{http://wiki.knoesis.org/index.php/Twarql}} is based on a distributed architectures which features: 
+In the Linked Open Social Signals project~\cite{Mendes:LOSS} Mendes et al. investigate the representation of microposts (the authors call the opinions, observations, and suggestions contained in microposts ``social signals") as Linked Open Data. The project's main goal is to enable collective analysis of social signals for sensemaking. The approach consists of the following steps\footnote{Steps adapted from \url{http://wiki.knoesis.org/index.php/Twarql}} 
 \begin{itemize}
-\item a client-side application which typically a Javacript-enabled web browser
-\item a "Social Sensor Server" to receive tweets and filter them according to the user's request. It is worth noting here that TWARQL filtering is based on web-semantic technologies: SPARQL, hash-tag resolution through glossaries and LOD cloud are used to extract the highest amount of information possible from the Twitter Streaming API.
+\item Extract content (entity mentions, hashtags and URLs) from microposts
+\item Encode content in RDF format
+\item Enable SPARQL querying of microposts
+\item Enable subscription to micropost streams that match a given query
+\item Enable scalable real-time delivery of streaming data via SparqlPuSH
+\end{itemize}
+The authors maintain a client-side JavaScript application allowing for receiving tweets and filter them according to the user's request. It is worth noting here that TWARQL filtering is based on web-semantic technologies: SPARQL, hash-tag resolution through glossaries and LOD cloud are used to extract the highest amount of information possible from the Twitter Streaming API.
 \item a number of distributed PuSH hubs which update clients as information flows (pushed-information model)
 \item another server -- "Semantic Publisher" -- registers user's interest and updates the hubs. The updated information is eventually displayed on the user's screen.
-\end{itemize}
-
 \subsection{Twopular}
-
-Twopular\footnote{Twopular website: \url{http://twopular.com/}} is a work of Martin Dudek. It aims at analysing current Twitter trends.
+Twopular\footnote{\url{http://twopular.com/}} is an experiment by Martin Dudek with the objective of analyzing current Twitter trends. Therefore, for a given set of at the particular moment current trends the most recents tweets are obtained, and in an interval of five minutes run through the OpenCalais Web service in order find tags. By having tags for Twitter trends, another way of searching for trends -- and more importantly the possibility to interrelate trends based on tag similarity -- gets enabled. The author sees the feature more like a ``linguistic experiment"\footnote{\url{http://twopular.com/blog/?p=308}}, however states that the first results seem to be promising. In our tests of the service we could affirm the author's self-assessment, e.g., the Twitter trend (at the time of writing, March 7, 2011, 2PM CET) ``Prince Andrew" was mapped to the OpenCalais tag ``Prince Andrew, Duke of York", and related tags were, among others,  ``Sex offender registration", and ``X-Offender", where the story behind the trend was that people were tweeting about Prince Andrew of England, whose close friend was found to be a pedophile.
 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.85\linewidth]{twopular-trends.png}
-  \caption{Twopular trends page}
+  \caption{Screenshot of the Twopular trends page.}
   \label{fig:dataflow}
 \end{figure}
-
-Since March 2008, Twopular takes advantage of OpenCalais services to extract entities from tweets retrieved from the Twitter Streaming API. \linebreak
-Semantic entities are then used to reflect Twitter's current "trends".
 
 \section{Conclusion}
 Contributions: time filters (via Analytics), geographical pivoting (via Analytics)
