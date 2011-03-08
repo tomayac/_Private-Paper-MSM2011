@@ -1,9 +1,36 @@
 \begin{thebibliography}{1}
 
+\bibitem{Bizer:DBpedia}
+S.~Auer, C.~Bizer, G.~Kobilarov, J.~Lehmann, R.~Cyganiak, and Z.~G. Ives.
+\newblock {DBpedia: A Nucleus for a Web of Open Data}.
+\newblock In {\em 6$^{th}$ International Semantic Web Conference (ISWC'07)},
+  pages 722--735, Busan, Korea, 2007.
+
+\bibitem{Jadhav:Twitris}
+A.~Jadhav, H.~Purohit, P.~Kapanipathia, P.~Ananthram, A.~Ranabahu, V.~Nguyen,
+  P.~N. Mendes, A.~G. Smith, M.~Cooney, and A.~Sheth.
+\newblock Twitris 2.0 : Semantically empowered system for understanding
+  perceptions from social data.
+\newblock Semantic Web Challenge at the 9$^{th}$ International Semantic Web
+  Conference (ISWC2010), Shanghai, China, 2010.
+
 \bibitem{Mendes:LOSS}
 P.~N. Mendes, A.~Passant, P.~Kapanipathi, and A.~P. Sheth.
 \newblock Linked open social signals.
 \newblock {\em Web Intelligence and Intelligent Agent Technology, IEEE/WIC/ACM
   International Conference on}, 1:224--231, 2010.
+
+\bibitem{Passant2008}
+A.~Passant, T.~Hastrup, U.~Bojars, and J.~Breslin.
+\newblock Microblogging: A semantic and distributed approach.
+\newblock In {\em Proceedings of the 4$^{th}$ Workshop on Scripting for the
+  Semantic Web, Tenerife, Spain, June 02, 2008, CEUR Workshop Proceedings},
+  2008.
+
+\bibitem{Tummarello:Sindice}
+G.~Tummarello, R.~Delbru, and E.~Oren.
+\newblock {Sindice.com: weaving the open linked data}.
+\newblock In {\em 6$^{th}$ International Semantic Web Conference (ISWC'07)},
+  pages 552--565, Busan, Korea, 2007.
 
 \end{thebibliography}
