@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: typeinst.aux
 The style file: abbrv.bst
 Database file #1: typeinst.bib
-You've used 5 entries,
+You've used 8 entries,
             2118 wiz_defined-function locations,
-            529 strings with 5058 characters,
-and the built_in function-call counts, 2289 in all, are:
-= -- 212
-> -- 150
+            555 strings with 5980 characters,
+and the built_in function-call counts, 3298 in all, are:
+= -- 311
+> -- 214
 < -- 2
-+ -- 59
-- -- 54
-* -- 170
-:= -- 377
-add.period$ -- 15
-call.type$ -- 5
-change.case$ -- 42
++ -- 84
+- -- 76
+* -- 237
+:= -- 552
+add.period$ -- 28
+call.type$ -- 8
+change.case$ -- 62
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 78
-empty$ -- 155
-format.name$ -- 54
-if$ -- 479
+cite$ -- 8
+duplicate$ -- 103
+empty$ -- 225
+format.name$ -- 76
+if$ -- 685
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 4
-newline$ -- 28
-num.names$ -- 10
-pop$ -- 54
+int.to.str$ -- 8
+missing$ -- 5
+newline$ -- 47
+num.names$ -- 16
+pop$ -- 79
 preamble$ -- 1
-purify$ -- 37
+purify$ -- 54
 quote$ -- 0
-skip$ -- 57
+skip$ -- 76
 stack$ -- 0
-substring$ -- 110
-swap$ -- 24
+substring$ -- 150
+swap$ -- 27
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 20
+type$ -- 32
 warning$ -- 0
-while$ -- 17
-width$ -- 6
-write$ -- 57
+while$ -- 25
+width$ -- 9
+write$ -- 96
