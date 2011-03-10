@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  9 MAR 2011 18:49
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  10 MAR 2011 12:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -377,14 +377,20 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 
 {/usr/local/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+
+Underfull \vbox (badness 6641) has occurred while \output is active []
+
  [4]
 <danbri.png, id=24, 474.77374pt x 305.14pt>
 File: danbri.png Graphic file (type png)
  <use danbri.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 <analytics.png, id=26, 1149.29375pt x 1051.93pt>
 File: analytics.png Graphic file (type png)
  <use analytics.png>
-Underfull \hbox (badness 5105) in paragraph at lines 169--169
+Underfull \hbox (badness 5105) in paragraph at lines 172--172
 []\OT1/cmr/bx/n/9 Fig.2. \OT1/cmr/m/n/9 En-ti-ties piv-oted by coun-try. The en
 -tity rep-re-sented by the URL
  []
@@ -392,34 +398,44 @@ Underfull \hbox (badness 5105) in paragraph at lines 169--169
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5 <./danbri.png>] [6 <./analytics.png (PNG copy)>] [7]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+Overfull \vbox (37.79347pt too high) has occurred while \output is active []
+
+
+[6 <./danbri.png> <./analytics.png (PNG copy)>] [7]
 <twopular-trends.png, id=39, 1064.97874pt x 581.17125pt>
 File: twopular-trends.png Graphic file (type png)
 
-<use twopular-trends.png> (./typeinst.bbl [8 <./twopular-trends.png (PNG copy)>
-]) [9] (./typeinst.aux) ) 
+<use twopular-trends.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./typeinst.bbl [8]) [9 <./twopular-trends.png (PNG copy)>] (./typeinst.aux) ) 
 Here is how much of TeX's memory you used:
- 3815 strings out of 493747
- 53560 string characters out of 3143546
- 135874 words of memory out of 3000000
- 7049 multiletter control sequences out of 15000+200000
+ 3819 strings out of 493747
+ 53622 string characters out of 3143546
+ 136906 words of memory out of 3000000
+ 7053 multiletter control sequences out of 15000+200000
  11115 words of font info for 44 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,9n,32p,1823b,888s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2010/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbx9.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi6.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr6.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr7.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr9.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
-9.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10
-.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.p
-fb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb
->
-Output written on typeinst.pdf (9 pages, 542721 bytes).
+ 38i,9n,32p,1511b,888s stack positions out of 5000i,500n,10000p,200000b,50000s
+<
+/usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
+usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
+sr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr
+/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
+ocal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
+texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
+live/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texliv
+e/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/
+2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
+010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/201
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on typeinst.pdf (9 pages, 544220 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream
