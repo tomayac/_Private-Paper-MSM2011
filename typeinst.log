@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  11 MAR 2011 16:08
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  11 MAR 2011 17:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,39 +499,44 @@ File: ipad.png Graphic file (type png)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9] [10 <./ipad.png>] <twopular-trends.png, id=57, 1064.97874pt x 581.17125pt>
+
+Underfull \vbox (badness 4120) has occurred while \output is active []
+
+ [9]
+[10 <./ipad.png>] [11]
+<twopular-trends.png, id=60, 1064.97874pt x 581.17125pt>
 File: twopular-trends.png Graphic file (type png)
 
-<use twopular-trends.png>
+<use twopular-trends.png> (./typeinst.bbl [12 <./twopular-trends.png (PNG copy)
+>]) [13] (./typeinst.aux)
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-[11] (./typeinst.bbl [12 <./twopular-trends.png (PNG copy)>]) [13]
-(./typeinst.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 4619 strings out of 493747
- 63538 string characters out of 3143546
- 146140 words of memory out of 3000000
- 7822 multiletter control sequences out of 15000+200000
+ 4620 strings out of 493747
+ 63551 string characters out of 3143546
+ 146150 words of memory out of 3000000
+ 7823 multiletter control sequences out of 15000+200000
  11758 words of font info for 46 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  38i,10n,32p,2020b,1114s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/cm-super/
-cm-super-ts1.enc}</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx9.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi6.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-6.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
-fb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><
-/usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></u
-sr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
-r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/
-local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/lo
-cal/texlive/2010/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on typeinst.pdf (13 pages, 620773 bytes).
+{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
+sr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
+l/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texl
+ive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
+ve/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive
+/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
+2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/20
+10/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2010
+/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
+Output written on typeinst.pdf (13 pages, 621123 bytes).
 PDF statistics:
  116 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream

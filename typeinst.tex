@@ -165,7 +165,7 @@ We have created a wrapper NLP Web service that merges results from existing thir
 ]
 \end{lstlisting}
 
-\subsection{Technical Implementation Of the Twitter Swarm NLP Extension}
+\subsection{Technical Implementation Of the Twitter Swarm NLP Extension}\label{sec:techimp}
 Twitter.com is an Ajax-dependent website, which makes use of so-called hashbang URIs\footnote{See \url{http://www.jenitennison.com/blog/node/154} for a detailed analysis of Twitter's use of hashbang URIs}. When the page Twitter.com gets loaded, the static parts of the page can be cached, while the dynamic parts -- controlled by the content of the hashbang URI -- get pulled in via JavaScript. Using a so-called escaped fragment in the query part of the URL (\texttt{?\_escaped\_fragment\_}), the state of the Twitter.com page is still accessible to Web crawlers, as specified in \cite{Google:Ajax}. Currently the extension is implemented in a way to run once upon page load, however, not upon Ajax refresh events on the page.
 
 We overload Google Analytics event tracking\footnote{\url{http://code.google.com/apis/analytics/docs/tracking/eventTrackerGuide.html}} for the purpose of tracking named entities. We interpret a Google Analytics event as the occurrence of a named entity in a never seen before tweet. In its original sense, event tracking is meant to track on-page events, like, e.g., playing or stopping an embedded video on a page. The anatomy of an event is as follows: an event is defined by its \texttt{category} (req.), \texttt{action} (req.), \texttt{label} (opt.), and \texttt{value} (opt.). In our concrete case, the \texttt{category} is always ``Entities", the \texttt{action} is any of the particular named entity's URIs (as they all represent the same thing, we simply choose the first URI of the list). The \texttt{label} is the particular entity's name and the sources of that named entity in parenthesis (as outlined in Section~\ref{sec:webservice}), and finally for the \texttt{value} we pass the timestamp of the moment where the entity extraction happened (which is closest to what we assume is the time where the tweet was read). A concrete call to log an occurrence of a named entity as injected onto Twitter.com by the content script might look like this (the \texttt{\_gaq} array is the Google Analytics queue for asynchronous tracking):
@@ -228,7 +228,7 @@ Rank & Named Entity & Total Occurrences \\
 \end{table}
 
 \subsection{Tracking Of Named Entities Over Time}
-Using Google Analytics it is straight-forward to analyze data over time. 
+Using Google Analytics named entities (i.e., events in the sense of Google Analytics, as outlined in Section~\ref{sec:techimp}) can be easily tracked over time. Figure~\ref{fig:ipad} shows  the occurrences over time for the named entity ``iPad". Albeit the numbers are not statistically significant, the peak of interest is on March 2, the day where the iPad 2 was revealed, and the second highest peak is on March 1, the day before the announcement where media was atwitter with expectation of the device. The occurrence graph  indeed corresponds to what we would expect.
 
 \begin{figure}[h!]
   \centering
