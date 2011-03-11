@@ -22,6 +22,8 @@
 \usepackage{wrapfig}
 \setcounter{tocdepth}{3}
 \usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{subfigure}
 \usepackage{verbatim} 
 \usepackage[hyphens]{url}
 \usepackage{textcomp}
@@ -183,7 +185,24 @@ Currently the extension displays all extracted named entities grouped by origina
 Each tweet gets sent one-by-one to the Twitter Swarm NLP Web service, as described in Section~\ref{sec:webservice}. While the extracted named entities of all tweets always get displayed to the user (as shown in Figure \ref{fig:danbri}), only named entities from tweets never seen before get sent to Google Analytics. This is to ensure that duplicate data from the same user does not falsify the overall statistics. It is to be noted that we do allow the same tweet to be tracked more than once (because one tweet can be read by more than one user), however, we want to exclude the case that the same tweet gets tracked more than once from the same user (we assume each tweet gets read at most one time). Twitter has introduced a new system to generate unique tweet IDs, called snowflake\footnote{\url{https://github.com/twitter/snowflake#readme}}, which guarantees k-sorted IDs (see \cite{Altman:1989:RSS:70413.70419}) with at least a 1s bound. Hence this allows us to store the ID of the latest tweet in the extension's local storage, and check whether the current tweet's ID is greater (i.e., the tweet is younger than the previous latest tweet and has thus not been seen before), and only if so, send its named entities to Analytics. While this strict limitation to only consider new tweets leaves out many old tweets from being tracked in Analytics, it is the only alternative to storing the ID of each and all tweets in local storage to assure duplication-free tracking.
 
 \section{Evaluation And Discussion}\label{sec:evaluation}
-In this section we first provide an evaluation of our experimentations and discuss the approach in the second part.
+In this section we first provide some raw statistics followed by an evaluation of our experimentations, and discuss the approach and its criticisms in the second part.
+
+\subsection{Raw Statistics}
+The extension was live since February 24, 2011. It was announced via Twitter\footnote{\url{http://twitter.com/#!/tomayac/status/40806491510276096}} on that day, and according to Bit.ly statistics\footnote{\url{http://bit.ly/eBsjQu+}} generated \textit{102 clicks} till March 11 (see Figure~\ref{fig:edge-a}). If we compare these click statistics on the announcement link with the pageview statistics according to Google Analytics (see Figure~\ref{fig:edge-b}), we can see interesting patterns. In the Bit.ly statistics there are two spikes on February 24 and 26, in the prior case originating from initial clicks on the link in the original tweet plus same-day retweets, and in the latter case originating from delayed retweets from people who found the extension interesting after testing it, together with a second announcement on February 26. The top usage spike according to Analytics is around February 28 to March 2, where on February 28 a new version of the extension was submitted to the Chrome Web Store, and also announced via Twitter. As of March 11 the extension reached \textit{1,009 pageviews} as reported by Analytics, and had \textit{35 all-time users} and \textit{28 seven-day active users}. This roughly translates to a rate of a little more than $\dfrac{1}{4}$ (exact value 27.45\%) of accumulated clicks on the announcement link per seven-day active users.
+
+\begin{figure}[htp]
+  \begin{center}
+    \subfigure[102 clicks as of Bit.ly.]{\label{fig:edge-a}\includegraphics[width=0.75\linewidth]{bitly.png}}
+    \subfigure[1,009 absolute Pageviews as of Analytics.]{\label{fig:edge-b}\includegraphics[width=0.75\linewidth]{all-traffic.png}}
+  \end{center}
+  \caption{Click traffic on the announcement link vs. pageviews of the installed extension.}
+  \label{fig:traffic}
+\end{figure}
+
+\subsection{Top Read-about Named Entites}
+In this section we present some statistics on the top read-about named entities (consumers' view), which, again, does not necessarily correspond to the most tweeted-about named entities (see Section~\ref{sec:twopular}), or most tweeted-about terms/hashtags (Twitter Trends). It is to be noted that our findings are at this point \textit{not} statistically significant due to a too small number of seven-day active users of our extension (also see Section~\ref{sec:criticism}), however, nevertheless -- interpreted with a grain of salt -- reveal interesting trends. If not noted differently, all statistics are for the period February 24 to March 11.
+
+\subsection{Criticism Of the Approach}\label{sec:criticism}
 
 \section{Related Work}\label{sec:relatedwork}
 As stated in Section~\ref{sec:introduction}, Twitter Trends is both an active field of academic and industry research, but also a playground for social media hobbyists. In the following we present four exemplary cases from both categories.
@@ -205,7 +224,7 @@ With Twitris 2.0~\cite{Jadhav:Twitris}, Jadhav et al. present an application to 
 \subsection{Semantic-MicrOBlogging (SMOB)}
 SMOB~\cite{Passant2008} by Passant et al. is a Semantic MicroBlogging framework that enables a distributed, open and semantic microblogging experience based on Semantic Web and Linked Data technologies. Microposts get annotated with common vocabularies like FOAF\footnote{\url{http://www.foaf-project.org/}} and SIOC\footnote{\url{http://sioc-project.org/}}. SMOB relies on distributed autonomous hubs that communicate with each other to exchange microblog posts and subscriptions, which can also be cross-posted to Twitter. The authors suggest people to use meaningful hashtags such as \texttt{\#dbp:Eiffel\_Tower}, or \texttt{\#geo:Paris\_France}, in the style of RDF prefixes for DBpedia~\cite{Bizer:DBpedia} and GeoNames. SMOB allows for manually annotating hashtags with URIs and RDF, with the objective of making microposts accessible for, e.g., lookup services such as Sindice~\cite{Tummarello:Sindice}.
 
-\subsection{Twopular}
+\subsection{Twopular}\label{sec:twopular}
 Twopular\footnote{\url{http://twopular.com/}} is an experiment by Martin Dudek with the objective of analyzing current Twitter trends. Therefore, for a given set of at the particular moment current trends the most recents tweets are obtained, and in an interval of five minutes run through the OpenCalais Web service in order find tags. By having tags for Twitter trends, another way of searching for trends -- and more importantly the possibility to interrelate trends based on tag similarity -- gets enabled. The author sees the feature more like a ``linguistic experiment"\footnote{\url{http://twopular.com/blog/?p=308}}, however states that the first results seem to be promising. In our tests of the service we could affirm the author's self-assessment, e.g., the Twitter trend (at the time of writing, March 7, 2011, 2PM CET) ``Prince Andrew" was mapped to the OpenCalais tag ``Prince Andrew, Duke of York", and related tags were, among others,  ``Sex offender registration", and ``X-Offender", where the story behind the trend was that people were tweeting about Prince Andrew of England, whose close friend was found to be a pedophile.
 
 \begin{figure}[h!]

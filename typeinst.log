@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  10 MAR 2011 17:54
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  11 MAR 2011 12:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -181,14 +181,95 @@ File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
 \Gin@req@height=\dimen126
 \Gin@req@width=\dimen127
 )
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks21
+\ex@=\dimen128
+))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen129
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count117
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count118
+\leftroot@=\count119
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count120
+\DOTSCASE@=\count121
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box55
+\strutbox@=\box56
+\big@size=\dimen130
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+
+
+Package amsmath Warning: Unable to redefine math accent \vec.
+
+\macc@depth=\count122
+\c@MaxMatrixCols=\count123
+\dotsspace@=\muskip10
+\c@parentequation=\count124
+\dspbrk@lvl=\count125
+\tag@help=\toks22
+\row@=\count126
+\column@=\count127
+\maxfields@=\count128
+\andhelp@=\toks23
+\eqnshift@=\dimen131
+\alignsep@=\dimen132
+\tagshift@=\dimen133
+\tagwidth@=\dimen134
+\totwidth@=\dimen135
+\lineht@=\dimen136
+\@envbody=\toks24
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+) (/usr/local/texlive/2010/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip48
+\subfigcapskip=\skip49
+\subfigcaptopadj=\dimen137
+\subfigbottomskip=\skip50
+\subfigcapmargin=\dimen138
+\subfiglabelskip=\skip51
+\c@subfigure=\count129
+\c@lofdepth=\count130
+\c@subtable=\count131
+\c@lotdepth=\count132
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2010/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip52
+\subfig@bottom=\skip53
+)
 (/usr/local/texlive/2010/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks21
-\verbatim@line=\toks22
+\every@verbatim=\toks26
+\verbatim@line=\toks27
 \verbatim@in@stream=\read1
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip10
+\Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/base/textcomp.sty
@@ -259,24 +340,24 @@ Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count117
-\lst@gtempboxa=\box55
-\lst@token=\toks23
-\lst@length=\count118
-\lst@currlwidth=\dimen128
-\lst@column=\count119
-\lst@pos=\count120
-\lst@lostspace=\dimen129
-\lst@width=\dimen130
-\lst@newlines=\count121
-\lst@lineno=\count122
-\lst@maxwidth=\dimen131
+\lst@mode=\count133
+\lst@gtempboxa=\box57
+\lst@token=\toks28
+\lst@length=\count134
+\lst@currlwidth=\dimen139
+\lst@column=\count135
+\lst@pos=\count136
+\lst@lostspace=\dimen140
+\lst@width=\dimen141
+\lst@newlines=\count137
+\lst@lineno=\count138
+\lst@maxwidth=\dimen142
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count123
-\lst@skipnumbers=\count124
-\lst@framebox=\box56
+\c@lstnumber=\count139
+\lst@skipnumbers=\count140
+\lst@framebox=\box58
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2007/02/22 1.4 listings configuration
@@ -286,37 +367,37 @@ Package: listings 2007/02/22 1.4 (Carsten Heinz)
 (./typeinst.aux)
 \openout1 = `typeinst.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 58.
  (/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    ... okay on input line 58.
 
 (/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count125
-\scratchdimen=\dimen132
-\scratchbox=\box57
-\nofMPsegments=\count126
-\nofMParguments=\count127
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count128
-\MPscratchDim=\dimen133
-\MPnumerator=\count129
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count141
+\scratchdimen=\dimen143
+\scratchbox=\box59
+\nofMPsegments=\count142
+\nofMParguments=\count143
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count144
+\MPscratchDim=\dimen144
+\MPnumerator=\count145
+\everyMPtoPDFconversion=\toks30
 ) (/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2010/04/01 v0.9 Utility functions of pdfTeX for LuaTeX (HO)
 
@@ -363,13 +444,13 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count130
-LaTeX Font Info:    Try loading font information for U+msa on input line 86.
+\c@lstlisting=\count146
+LaTeX Font Info:    Try loading font information for U+msa on input line 88.
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 86.
+LaTeX Font Info:    Try loading font information for U+msb on input line 88.
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -391,45 +472,55 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5 <./analytics.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 172
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 174
 .
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [6] [7] [8]
-<twopular-trends.png, id=43, 1064.97874pt x 581.17125pt>
+) [6]
+<bitly.png, id=36, 1021.8175pt x 290.08376pt>
+File: bitly.png Graphic file (type png)
+ <use bitly.png>
+<all-traffic.png, id=37, 883.3pt x 154.5775pt>
+File: all-traffic.png Graphic file (type png)
+ <use all-traffic.png> [7]
+[8 <./bitly.png> <./all-traffic.png>] [9]
+<twopular-trends.png, id=51, 1064.97874pt x 581.17125pt>
 File: twopular-trends.png Graphic file (type png)
 
-<use twopular-trends.png> [9 <./twopular-trends.png (PNG copy)>]
-(./typeinst.bbl) [10] (./typeinst.aux) ) 
+<use twopular-trends.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./typeinst.bbl [10]) [11 <./twopular-trends.png (PNG copy)>] (./typeinst.aux) 
+) 
 Here is how much of TeX's memory you used:
- 3838 strings out of 493747
- 54174 string characters out of 3143546
- 132914 words of memory out of 3000000
- 7067 multiletter control sequences out of 15000+200000
+ 4604 strings out of 493747
+ 63323 string characters out of 3143546
+ 146102 words of memory out of 3000000
+ 7809 multiletter control sequences out of 15000+200000
  11758 words of font info for 46 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,9n,32p,1624b,1116s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2010/texmf-dist/fon
-ts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2010/texmf-dist/font
-s/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2010/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2010/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr9.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmti10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmti9.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmtt10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmtt8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmtt9.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/cm-super/s
-ftt0800.pfb>
-Output written on typeinst.pdf (10 pages, 559446 bytes).
+ 38i,9n,32p,1624b,1114s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></us
+r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
+/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
+xlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
+ve/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texliv
+e/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/
+2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
+010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/201
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2010/
+texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
+Output written on typeinst.pdf (11 pages, 587699 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 106 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
