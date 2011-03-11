@@ -188,19 +188,54 @@ Each tweet gets sent one-by-one to the Twitter Swarm NLP Web service, as describ
 In this section we first provide some raw statistics followed by an evaluation of our experimentations, and discuss the approach and its criticisms in the second part.
 
 \subsection{Raw Statistics}
-The extension was live since February 24, 2011. It was announced via Twitter\footnote{\url{http://twitter.com/#!/tomayac/status/40806491510276096}} on that day, and according to Bit.ly statistics\footnote{\url{http://bit.ly/eBsjQu+}} generated \textit{102 clicks} till March 11 (see Figure~\ref{fig:edge-a}). If we compare these click statistics on the announcement link with the pageview statistics according to Google Analytics (see Figure~\ref{fig:edge-b}), we can see interesting patterns. In the Bit.ly statistics there are two spikes on February 24 and 26, in the prior case originating from initial clicks on the link in the original tweet plus same-day retweets, and in the latter case originating from delayed retweets from people who found the extension interesting after testing it, together with a second announcement on February 26. The top usage spike according to Analytics is around February 28 to March 2, where on February 28 a new version of the extension was submitted to the Chrome Web Store, and also announced via Twitter. As of March 11 the extension reached \textit{1,009 pageviews} as reported by Analytics, and had \textit{35 all-time users} and \textit{28 seven-day active users}. This roughly translates to a rate of a little more than $\dfrac{1}{4}$ (exact value 27.45\%) of accumulated clicks on the announcement link per seven-day active users.
+The extension was live since February 24, 2011. It was announced via Twitter\footnote{\url{http://twitter.com/#!/tomayac/status/40806491510276096}} on that day, and according to Bit.ly statistics\footnote{\url{http://bit.ly/eBsjQu+}} generated \textit{102 clicks} till March 11 (see Figure~\ref{fig:edge-a}). If we compare these click statistics on the announcement link with the pageview statistics according to Google Analytics (see Figure~\ref{fig:edge-b}), we can see interesting patterns. In the Bit.ly statistics there are two spikes on February 24 and 26, in the prior case originating from initial clicks on the link in the original tweet plus same-day retweets, and in the latter case originating from delayed retweets from people who found the extension interesting after testing it, together with a second announcement on February 26. The top usage spike according to Analytics is around February 28 to March 2, where on February 28 a new version of the extension was submitted to the Chrome Web Store, and also announced via Twitter. As of March 11 the extension reached \textit{1,009 pageviews} as reported by Analytics, and had \textit{35 all-time users} and \textit{28 seven-day active users}. This roughly translates to a rate of a little more than $\dfrac{1}{4}$ (exact value 27.45\%) of accumulated clicks on the announcement link per seven-day active users. All in all, the extension has detected \textit{1,533 unique named entities} in total, see Figure~\ref{fig:edge-c} for a detailed distribution of occurrences. 
+
+% http://chart.apis.google.com/chart?chxl=1:|Exactly+1|Exactly+2|Exactly+3|Exactly+4|Exactly+5|More+than+5&chxr=0,5,1400|1,1.667,100&chxs=0,676767,12,0,l,676767|1,676767,12,0,l,676767&chxt=y,x&chbh=a,5&chs=800x200&cht=bvg&chco=6BAFF0&chds=0,1294&chd=t:1294,162,36,19,10,12&chdlp=t&chg=0,10&chm=N,000000,0,-1,11
 
 \begin{figure}[htp]
   \begin{center}
-    \subfigure[102 clicks as of Bit.ly.]{\label{fig:edge-a}\includegraphics[width=0.75\linewidth]{bitly.png}}
-    \subfigure[1,009 absolute Pageviews as of Analytics.]{\label{fig:edge-b}\includegraphics[width=0.75\linewidth]{all-traffic.png}}
+    \subfigure[102 accumulated clicks on the announcement link as of Bit.ly.]{\label{fig:edge-a}\includegraphics[width=0.75\linewidth]{bitly.png}}
+    \subfigure[1,009 absolute pageviews of the extension as of Analytics.]{\label{fig:edge-b}\includegraphics[width=0.75\linewidth]{all-traffic.png}}
+    \subfigure[Distribution of named entity occurrences as of Analytics.]{\label{fig:edge-c}\includegraphics[width=0.75\linewidth]{distribution.png}}
   \end{center}
-  \caption{Click traffic on the announcement link vs. pageviews of the installed extension.}
+  \caption{Raw statistics.}
   \label{fig:traffic}
 \end{figure}
 
 \subsection{Top Read-about Named Entites}
-In this section we present some statistics on the top read-about named entities (consumers' view), which, again, does not necessarily correspond to the most tweeted-about named entities (see Section~\ref{sec:twopular}), or most tweeted-about terms/hashtags (Twitter Trends). It is to be noted that our findings are at this point \textit{not} statistically significant due to a too small number of seven-day active users of our extension (also see Section~\ref{sec:criticism}), however, nevertheless -- interpreted with a grain of salt -- reveal interesting trends. If not noted differently, all statistics are for the period February 24 to March 11.
+In this section we present some statistics on the top read-about named entities (consumers' view), which, again, does not necessarily correspond to the most tweeted-about named entities (see Section~\ref{sec:twopular}), or most tweeted-about terms/hashtags (Twitter Trends). It is to be noted that our findings are at this point \textit{not} statistically significant due to a too small number of seven-day active users of our extension (also see Section~\ref{sec:criticism}), however, nevertheless reveal interesting trends when the results are interpreted with a grain of salt. See Table~\ref{table:top10} for the top 10 read-about named entities. If not noted differently, all statistics are for the period February 24 to March 11. Looking at the data, we can see that the topic around the events in ``Lybia" (rank 1 and 6) and its dictator ``Gaddafi" (rank 10) were of high interest to the tweet readers\footnote{See \url{http://en.wikipedia.org/wiki/2011_Libyan_uprising} for a summary of the events.}. Rank 7 is taken by the named entity ``iPad", which makes sense given the reveal of the iPad 2 on March 2, 2011\footnote{See \url{http://en.wikipedia.org/wiki/Ipad_2#History} for the details.}. Other named entities are not necessarily easily mappable to concrete events, however, the data suggests that ``Twitter" (rank 2), ``Google" (rank 3), and ``YouTube" (rank 5) are companies that tweet readers show a general interest for, which seems reasonable. For the named entity ``Linked Data", this is probably due to the social Twitter environment of the author, but given the too small installation base is representative. The named entity ``glossary of graph theory" is definitely a false positive, as the underlying term was always ``successor". We have no explanation for the popularity of ``United States dollar", however, suppose that it is a correctly recognized, albeit relatively meaningless as out of context, named entity, as the underlying term was in all cases ``USD".
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{lll}
+\hline
+Rank & Named Entity & Total Occurrences \\ 
+\hline
+1 & \url{http://dbpedia.org/resource/Libya} & 23 \\
+2 & \url{http://dbpedia.org/resource/Twitter} & 21 \\
+3 & \url{http://dbpedia.org/resource/Google} & 13 \\
+4 & \url{http://dbpedia.org/resource/United_States_dollar} & 10 \\
+5 & \url{http://dbpedia.org/resource/YouTube} & 10 \\
+6 & \url{http://rdf.freebase.com/ns/en/libya} & 10 \\
+7 & \url{http://dbpedia.org/resource/IPad} & 9 \\
+8 & \url{http://rdf.freebase.com/ns/en/linked_data} & 9 \\
+9 & \url{http://dbpedia.org/resource/Glossary_of_graph_theory} & 8 \\
+10 & \url{http://dbpedia.org/resource/Muammar_al-Gaddafi} & 8 \\
+\hline \\
+\end{tabular}
+\end{center}
+\caption{Top 10 read-about named entities (for rank 4, the original URL was \texttt{http://d.opencalais.com/genericHasher-1/736a403d-157b-3e80-86a7-acc404607cb2})}\label{table:top10}
+\end{table}
+
+\subsection{Tracking Of Named Entities Over Time}
+Using Google Analytics it is straight-forward to analyze data over time. 
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\linewidth]{ipad.png}
+  \caption{Popularity of the named entity ``iPad" (actually ``iPad 2") over time. The device was revealed on March 2, 2011.}
+  \label{fig:ipad}
+\end{figure}
 
 \subsection{Criticism Of the Approach}\label{sec:criticism}
 

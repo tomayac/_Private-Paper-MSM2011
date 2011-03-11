@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  11 MAR 2011 12:00
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  11 MAR 2011 16:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -477,50 +477,64 @@ LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 174
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [6]
-<bitly.png, id=36, 1021.8175pt x 290.08376pt>
+) [6] [7]
+<bitly.png, id=41, 1021.8175pt x 290.08376pt>
 File: bitly.png Graphic file (type png)
  <use bitly.png>
-<all-traffic.png, id=37, 883.3pt x 154.5775pt>
+<all-traffic.png, id=42, 883.3pt x 154.5775pt>
 File: all-traffic.png Graphic file (type png)
- <use all-traffic.png> [7]
-[8 <./bitly.png> <./all-traffic.png>] [9]
-<twopular-trends.png, id=51, 1064.97874pt x 581.17125pt>
+ <use all-traffic.png>
+<distribution.png, id=43, 803.0pt x 200.75pt>
+File: distribution.png Graphic file (type png)
+ <use distribution.png> [8 <./bitly.png> <./all-traffic.png> <./distribution.pn
+g (PNG copy)>]
+Overfull \hbox (15.56949pt too wide) in paragraph at lines 227--227
+\OT1/cmtt/m/n/9 http://d.opencalais.com/genericHasher-1/736a403d-157b-3e80-86a7
+-acc404607cb2\OT1/cmr/m/n/9 ) 
+ []
+
+<ipad.png, id=49, 871.255pt x 228.855pt>
+File: ipad.png Graphic file (type png)
+ <use ipad.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9] [10 <./ipad.png>] <twopular-trends.png, id=57, 1064.97874pt x 581.17125pt>
 File: twopular-trends.png Graphic file (type png)
 
 <use twopular-trends.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(./typeinst.bbl [10]) [11 <./twopular-trends.png (PNG copy)>] (./typeinst.aux) 
-) 
+[11] (./typeinst.bbl [12 <./twopular-trends.png (PNG copy)>]) [13]
+(./typeinst.aux) ) 
 Here is how much of TeX's memory you used:
- 4604 strings out of 493747
- 63323 string characters out of 3143546
- 146102 words of memory out of 3000000
- 7809 multiletter control sequences out of 15000+200000
+ 4619 strings out of 493747
+ 63538 string characters out of 3143546
+ 146140 words of memory out of 3000000
+ 7822 multiletter control sequences out of 15000+200000
  11758 words of font info for 46 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,9n,32p,1624b,1114s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}
-</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-/usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
-usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></us
-r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
-local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
-/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
-xlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
-ve/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texliv
-e/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/
-2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
-010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/201
-0/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2010/
-texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on typeinst.pdf (11 pages, 587699 bytes).
+ 38i,10n,32p,2020b,1114s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/cm-super/
+cm-super-ts1.enc}</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx9.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi6.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+6.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
+fb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><
+/usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></u
+sr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
+r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/
+local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/lo
+cal/texlive/2010/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
+Output written on typeinst.pdf (13 pages, 620773 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 116 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
