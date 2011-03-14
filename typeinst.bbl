@@ -1,16 +1,5 @@
 \begin{thebibliography}{1}
 
-\bibitem{Altman:1989:RSS:70413.70419}
-T.~Altman and Y.~Igarashi.
-\newblock Roughly sorting: sequential and parallel approach.
-\newblock {\em J. Inf. Process.}, 12:154--158, January 1989.
-
-\bibitem{Bizer:DBpedia}
-S.~Auer, C.~Bizer, G.~Kobilarov, J.~Lehmann, R.~Cyganiak, and Z.~G. Ives.
-\newblock {DBpedia: A Nucleus for a Web of Open Data}.
-\newblock In {\em 6$^{th}$ International Semantic Web Conference (ISWC'07)},
-  pages 722--735, Busan, Korea, 2007.
-
 \bibitem{Jadhav:Twitris}
 A.~Jadhav, H.~Purohit, P.~Kapanipathia, P.~Ananthram, A.~Ranabahu, V.~Nguyen,
   P.~N. Mendes, A.~G. Smith, M.~Cooney, and A.~Sheth.
@@ -42,18 +31,5 @@ A.~Passant, T.~Hastrup, U.~Bojars, and J.~Breslin.
   Semantic Web, Tenerife, Spain, June 02, 2008, CEUR Workshop Proceedings},
   2008.
 \newblock \url{http://CEUR-WS.org/Vol-368/paper11.pdf}.
-
-\bibitem{Google:Ajax}
-K.~Probst, B.~Johnson, A.~Mukherjee, E.~van~der Poel, L.~Xiao, and J.~Mueller.
-\newblock Making ajax applications crawlable.
-\newblock Google, 2009.
-\newblock
-  \url{http://code.google.com/web/ajaxcrawling/docs/getting-started.html}.
-
-\bibitem{Tummarello:Sindice}
-G.~Tummarello, R.~Delbru, and E.~Oren.
-\newblock {Sindice.com: weaving the open linked data}.
-\newblock In {\em 6$^{th}$ International Semantic Web Conference (ISWC'07)},
-  pages 552--565, Busan, Korea, 2007.
 
 \end{thebibliography}
