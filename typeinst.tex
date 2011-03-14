@@ -136,7 +136,7 @@ With our Twitter Swarm NLP extension\footnote{\url{https://chrome.google.com/web
 \begin{figure}[ht!]
   \centering
   \includegraphics[width=0.5\linewidth]{danbri.png}
-  \caption{Screenshot of the extracted entites of a particular tweet as displayed by the Twitter Swarm NLP Extension.}
+  \caption{Screenshot of the extracted entites of a tweet as displayed by the extension.}
   \label{fig:danbri}
 \end{figure}
 
@@ -150,7 +150,7 @@ With our Twitter Swarm NLP extension\footnote{\url{https://chrome.google.com/web
 \end{comment}
 
 \subsection{Twitter Swarm NLP Web Service}\label{sec:webservice}
-We have created a wrapper NLP Web service that merges results from existing third-party NLP Web services, namely from OpenCalais\footnote{\url{http://www.opencalais.com/}}, Zemanta\footnote{\url{http://www.zemanta.com/}}, AlchemyAPI\footnote{\url{http://www.alchemyapi.com/}}, and DBpedia Spotlight\footnote{\url{http://dbpedia.org/spotlight}}. All NLP Web services return named entities together with their types and potential subtypes, names, relevance, and URIs that link into the Linked Open Data (LOD) cloud\footnote{\url{http://lod-cloud.net/}}. The problem is that each service has implemented its own type system (e.g., the type ``city" is represented by \url{http://dbpedia.org/ontology/City} in DBpedia vs. \url{http://rdf.freebase.com/ns/location.citytown} in Freebase). Providing mappings for all of them would be a rather time-consuming task. However, as all services offer links into the LOD cloud, the type information can be pulled from there if need be, in a true Linked Data manner. In order to clarify what our wrapper service provides, the merged results for the sample query ``Google Translate'' are depicted below. For the sake of clarity, we just show a shortened form (the complete result can be seen at the URL \url{http://tomayac.no.de/entity-extraction/combined/Google%20Translate}).
+We have created a wrapper NLP Web service that merges results from existing third-party NLP Web services, namely from OpenCalais\footnote{\url{http://www.opencalais.com/}}, Zemanta\footnote{\url{http://www.zemanta.com/}}, AlchemyAPI\footnote{\url{http://www.alchemyapi.com/}}, and DBpedia\cite{Bizer:DBpedia} Spotlight\footnote{\url{http://dbpedia.org/spotlight}}. All NLP Web services return named entities together with their types and potential subtypes, names, relevance, and URIs that link into the Linked Open Data (LOD) cloud\footnote{\url{http://lod-cloud.net/}}. The problem is that each service has implemented its own type system (e.g., the type ``city" is represented by \url{http://dbpedia.org/ontology/City} in DBpedia vs. \url{http://rdf.freebase.com/ns/location.citytown} in Freebase). Providing mappings for all of them would be a rather time-consuming task. However, as all services offer links into the LOD cloud, the type information can be pulled from there if need be, in a true Linked Data manner. In order to clarify what our wrapper service provides, the merged results for the sample query ``Google Translate'' are depicted below. For the sake of clarity, we just show a shortened form (the complete result can be seen at the URL \url{http://tomayac.no.de/entity-extraction/combined/Google%20Translate}).
 
 \begin{lstlisting}
 [
@@ -196,9 +196,9 @@ The extension was live since February 24, 2011. It was announced via Twitter\foo
 
 \begin{figure}[htp]
   \begin{center}
-    \subfigure[102 accumulated clicks on the announcement link as of Bit.ly.]{\label{fig:edge-a}\includegraphics[width=0.75\linewidth]{bitly.png}}
-    \subfigure[1,009 absolute pageviews of the extension as of Analytics.]{\label{fig:edge-b}\includegraphics[width=0.75\linewidth]{all-traffic.png}}
-    \subfigure[Distribution of named entity occurrences as of Analytics.]{\label{fig:edge-c}\includegraphics[width=0.75\linewidth]{distribution.png}}
+    \subfigure[102 accumulated clicks on the announcement link as of Bit.ly.]{\label{fig:edge-a}\includegraphics[width=0.7\linewidth]{bitly.png}}
+    \subfigure[1,009 absolute pageviews of the extension as of Analytics.]{\label{fig:edge-b}\includegraphics[width=0.7\linewidth]{all-traffic.png}}
+    \subfigure[Distribution of named entity occurrences as of Analytics.]{\label{fig:edge-c}\includegraphics[width=0.7\linewidth]{distribution.png}}
   \end{center}
   \caption{Raw statistics.}
   \label{fig:traffic}
@@ -234,8 +234,8 @@ Using Google Analytics, named entities (i.e., events in the sense of Google Anal
 
 \begin{figure}[ht!]
   \begin{center}
-    \subfigure[Popularity of the named entity ``iPad" (actually ``iPad 2") over time (February 24 - March 11). The device was revealed on March 2, 2011.]{\label{fig:overtime-edge-a}\includegraphics[width=0.9\linewidth]{ipad.png}}
-    \subfigure[Popularity of the named entity ``tsunami" over time (March 10 - March 14). Japan was hit by an earthquake followed by a tsunami on March 11.]{\label{fig:overtime-edge-b}\includegraphics[width=0.9\linewidth]{tsunami.png}}
+    \subfigure[Popularity of the named entity ``iPad" (actually ``iPad 2") over time (February 24 - March 11). The device was revealed on March 2, 2011.]{\label{fig:overtime-edge-a}\includegraphics[width=0.495\linewidth]{ipad.png}}
+    \subfigure[Popularity of the named entity ``tsunami" over time (March 10 - March 14). Japan was hit by an earthquake followed by a tsunami on March 11.]{\label{fig:overtime-edge-b}\includegraphics[width=0.495\linewidth]{tsunami.png}}
   \end{center}
   \caption{Popularity of named entities over time.}
   \label{fig:overtime}
@@ -276,7 +276,7 @@ In the Linked Open Social Signals project~\cite{Mendes:LOSS} Mendes et al. inves
 With Twitris 2.0~\cite{Jadhav:Twitris}, Jadhav et al. present an application to find out what is being said about an event and when, to detect how topics of discussion are changing over a period of time, and finally to check whether there are regional differences in the opinions on a given topic. The approach consists of picking trending hashtags from Twitter, which are then expanded by data from Google Insights for Search\footnote{\url{http://www.google.com/insights/search/}}. Using this set of search terms, related hashtags are then searched on Twitter to detect topic drifts. In order to locate the origin of a tweet, Twitris uses the approximation of the location given in the user's Twitter profile. This approach works well if there is geocodable data (like ``Austin, Texas"), however, fails if there is generic data (like ``somewhere under the rainbow"). Tweets about a given set of topics can then be examined on a map view, enriched by relevant photo and video content. For each location hotspot a tag cloud with related tags is displayed, and the data can be sliced by time.
 
 \subsection{Semantic-MicrOBlogging (SMOB)}
-SMOB~\cite{Passant2008} by Passant et al. is a Semantic MicroBlogging framework that enables a distributed, open and semantic microblogging experience based on Semantic Web and Linked Data technologies. Microposts get annotated with common vocabularies like FOAF\footnote{\url{http://www.foaf-project.org/}} and SIOC\footnote{\url{http://sioc-project.org/}}. SMOB relies on distributed autonomous hubs that communicate with each other to exchange microblog posts and subscriptions, which can also be cross-posted to Twitter. The authors suggest the use of meaningful hashtags such as \texttt{\#dbp:Eiffel\_Tower}, or \texttt{\#geo:Paris\_France}, in the style of RDF prefixes for DBpedia and GeoNames. SMOB allows for manually annotating hashtags with URIs and RDF, with the objective of making microposts accessible for, e.g., lookup services such as Sindice\footnote{\url{http://sindice.com/}}.
+SMOB~\cite{Passant2008} by Passant et al. is a Semantic MicroBlogging framework that enables a distributed, open and semantic microblogging experience based on Semantic Web and Linked Data technologies. Microposts get annotated with common vocabularies like FOAF\footnote{\url{http://www.foaf-project.org/}} and SIOC\footnote{\url{http://sioc-project.org/}}. SMOB relies on distributed autonomous hubs that communicate with each other to exchange microblog posts and subscriptions, which can also be cross-posted to Twitter. The authors suggest the use of meaningful hashtags such as \texttt{\#dbp:Eiffel\_Tower}, or \texttt{\#geo:Paris\_France}, in the style of RDF prefixes for DBpedia and GeoNames. SMOB allows for manually annotating hashtags with URIs and RDF, with the objective of making microposts accessible for, e.g., lookup services such as Sindice\cite{Tummarello:Sindice}.
 
 \subsection{Twopular}\label{sec:twopular}
 Twopular\footnote{\url{http://twopular.com/}} is an experiment by Martin Dudek with the objective of analyzing current Twitter trends. Therefore, for a given set of at the particular moment current trends the most recents tweets are obtained, and in an interval of five minutes run through the OpenCalais Web service in order to find tags. By having tags for Twitter trends, another way of searching for trends -- and more importantly the possibility to interrelate trends based on tag similarity -- gets enabled.
