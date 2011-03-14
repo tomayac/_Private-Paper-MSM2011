@@ -26,6 +26,7 @@
 \usepackage{subfigure}
 \usepackage{verbatim} 
 \usepackage[hyphens]{url}
+\usepackage{fixltx2e}
 \usepackage{textcomp}
 \usepackage{listings}
 \lstset{
@@ -71,11 +72,15 @@
 % their surnames. This ensures that the names appear correctly in
 % the running heads and the author index.
 %
-\author{Thomas Steiner \and Arnaud Brousseau}
+\author{Thomas Steiner\textsuperscript{\P} \and Arnaud Brousseau\textsuperscript{\P\dag}%
+\thanks{The author is currently a graduate student at EURECOM, Sophia Antipolis, France, and works as an intern at Google Germany GmbH.}%
+\and Rapha\"{e}l Troncy\textsuperscript{\dag}}
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
-\institute{Google Germany GmbH, ABC-Str. 19, 20354 Hamburg, Germany\\
-\url{{tomac, arnaudb}@google.com}}
+\institute{\textsuperscript{\P}Google Germany GmbH, ABC-Str. 19, 20354 Hamburg, Germany\\
+\url{{tomac, arnaudb}@google.com} \\
+\textsuperscript{\dag}EURECOM, Sophia Antipolis, France\\
+\url{raphael.troncy@eurecom.fr}}
 
 %
 % NB: a more complex sample for affiliations and the mapping to the
@@ -102,7 +107,7 @@ To compute trends, Twitter uses an algorithm which analyzes the words and hashta
 \end{itemize}
 
 \begin{comment}
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
     \includegraphics[width=0.17\linewidth]{twitter-trends.png}
   \caption{Screenshot of Twitter Trends as of Friday, March 4, 2011, 4pm CET.}
@@ -128,14 +133,14 @@ Google Analytics\footnote{\url{http://www.google.com/analytics/}} is Google's fr
 \section{Twitter Swarm NLP Extension}\label{sec:twitterswarm}
 With our Twitter Swarm NLP extension\footnote{\url{https://chrome.google.com/webstore/detail/dpbphenfafkflfmdlanimlemacankjol}}, we inject JavaScript code via a content script into the Twitter.com homepage. By installing this extension, users explicitely opt-in to their data as a Twitter.com visitor being tracked by Google Analytics. The extension first checks if the user is logged in to Twitter.com, and if so, retrieves the tweets of the logged-in user's timeline (\url{http://twitter.com/#}), or search result page (e.g., \url{http://twitter.com/#!/search/%23semweb}), or profile page (e.g., \url{http://twitter.com/#!/timberners_lee}) on a one-by-one basis, and performs Named Entity Extraction (NEE) via Natural Language Processing (NLP) using a remote NLP Web service (see Section~\ref{sec:webservice}) on each of the tweets. The extracted entities are then displayed on the righthand-column of the Twitter.com homepage (see Figure~\ref{fig:danbri}), and sent to Google Analytics for further processing (see Figure~\ref{fig:analytics}).
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
   \includegraphics[width=0.5\linewidth]{danbri.png}
   \caption{Screenshot of the extracted entites of a particular tweet as displayed by the Twitter Swarm NLP Extension.}
   \label{fig:danbri}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
   \includegraphics[width=0.8\linewidth]{analytics.png}
   \caption{Named entities pivoted by countries/territories. The named entity represented by the URL \texttt{http://dbpedia.org/resource/Lybia} appeared in nine tweets read by users located in Finland (red borders in the screenshot).}
@@ -185,7 +190,7 @@ Currently the extension displays all extracted named entities grouped by origina
 Each tweet gets sent one-by-one to the Twitter Swarm NLP Web service, as described in Section~\ref{sec:webservice}. While the extracted named entities of all tweets always get displayed to the user (as shown in Figure \ref{fig:danbri}), only named entities from tweets never seen before get sent to Google Analytics. This is to ensure that duplicate data from the same user does not falsify the overall statistics. It is to be noted that we do allow the same tweet to be tracked more than once (because one tweet can be read by more than one user), however, we want to exclude the case that the same tweet gets tracked more than once from the same user (we assume each tweet gets read at most one time). Twitter has introduced a new system to generate unique tweet IDs, called snowflake\footnote{\url{https://github.com/twitter/snowflake#readme}}, which guarantees k-sorted IDs (see \cite{Altman:1989:RSS:70413.70419}) with at least a 1s bound. Hence this allows us to store the ID of the latest tweet in the extension's local storage, and check whether the current tweet's ID is greater (i.e., the tweet is younger than the previous latest tweet and has thus not been seen before), and only if so, send its named entities to Analytics. While this strict limitation to only consider new tweets leaves out many old tweets from being tracked in Analytics, it is the only alternative to storing the ID of each and all tweets in local storage to assure duplication-free tracking.
 
 \section{Evaluation And Discussion}\label{sec:evaluation}
-In this section we first provide some raw statistics followed by an evaluation of our experimentations, and discuss the approach and its criticisms in the second part.
+In this section we first provide some raw statistics followed by an evaluation of our experimentations, and discuss the approach and its criticisms in the second part. If not noted differently, all statistics are for the period February 24 to March 11.
 
 \subsection{Raw Statistics}
 The extension was live since February 24, 2011. It was announced via Twitter\footnote{\url{http://twitter.com/#!/tomayac/status/40806491510276096}} on that day, and according to Bit.ly statistics\footnote{\url{http://bit.ly/eBsjQu+}} generated \textit{102 clicks} till March 11 (see Figure~\ref{fig:edge-a}). If we compare these click statistics on the announcement link with the pageview statistics according to Google Analytics (see Figure~\ref{fig:edge-b}), we can see interesting patterns. In the Bit.ly statistics there are two spikes on February 24 and 26, in the prior case originating from initial clicks on the link in the original tweet plus same-day retweets, and in the latter case originating from delayed retweets from people who found the extension interesting after testing it, together with a second announcement on February 26. The top usage spike according to Analytics is around February 28 to March 2, where on February 28 a new version of the extension was submitted to the Chrome Web Store, and also announced via Twitter. As of March 11 the extension reached \textit{1,009 pageviews} as reported by Analytics, and had \textit{35 all-time users} and \textit{28 seven-day active users}. This roughly translates to a rate of a little more than $\dfrac{1}{4}$ (exact value 27.45\%) of accumulated clicks on the announcement link per seven-day active users. All in all, the extension has detected \textit{1,533 unique named entities} in total, see Figure~\ref{fig:edge-c} for a detailed distribution of occurrences. 
@@ -203,7 +208,7 @@ The extension was live since February 24, 2011. It was announced via Twitter\foo
 \end{figure}
 
 \subsection{Top Read-about Named Entites}
-In this section we present some statistics on the top read-about named entities (consumers' view), which, again, does not necessarily correspond to the most tweeted-about named entities (see Section~\ref{sec:twopular}), or most tweeted-about terms/hashtags (Twitter Trends). It is to be noted that our findings are at this point \textit{not} statistically significant due to a too small number of seven-day active users of our extension (also see Section~\ref{sec:criticism}), however, nevertheless reveal interesting trends when the results are interpreted with a grain of salt. See Table~\ref{table:top10} for the top 10 read-about named entities. If not noted differently, all statistics are for the period February 24 to March 11. Looking at the data, we can see that the topic around the events in ``Lybia" (rank 1 and 6) and its dictator ``Gaddafi" (rank 10) were of high interest to the tweet readers\footnote{See \url{http://en.wikipedia.org/wiki/2011_Libyan_uprising} for a summary of the events.}. Rank 7 is taken by the named entity ``iPad", which makes sense given the reveal of the iPad 2 on March 2, 2011\footnote{See \url{http://en.wikipedia.org/wiki/Ipad_2#History} for the details.}. Other named entities are not necessarily easily mappable to concrete events, however, the data suggests that ``Twitter" (rank 2), ``Google" (rank 3), and ``YouTube" (rank 5) are companies that tweet readers show a general interest for, which seems reasonable. For the named entity ``Linked Data", this is probably due to the social Twitter environment of the author, but given the too small installation base is representative. The named entity ``glossary of graph theory" is definitely a false positive, as the underlying term was always ``successor". We have no explanation for the popularity of ``United States dollar", however, suppose that it is a correctly recognized, albeit relatively meaningless as out of context, named entity, as the underlying term was in all cases ``USD".
+In this section we present some statistics on the top read-about named entities (consumers' view), which, again, does not necessarily correspond to the most tweeted-about named entities (see Section~\ref{sec:twopular}), or most tweeted-about terms/hashtags (Twitter Trends). It is to be noted that our findings are at this point \textit{not} statistically significant due to a too small number of seven-day active users of our extension (also see Section~\ref{sec:criticism}), however, nevertheless reveal interesting trends when the results are interpreted with a grain of salt. See Table~\ref{table:top10} for the top 10 read-about named entities. Looking at the data, we can see that the topic around the events in ``Lybia" (rank 1 and 6) and its dictator ``Gaddafi" (rank 10) were of high interest to the tweet readers\footnote{See \url{http://en.wikipedia.org/wiki/2011_Libyan_uprising} for a summary of the events.}. Rank 7 is taken by the named entity ``iPad", which makes sense given the reveal of the iPad 2 on March 2, 2011\footnote{See \url{http://en.wikipedia.org/wiki/Ipad_2#History} for the details.}. Other named entities are not necessarily easily mappable to concrete events, however, the data suggests that ``Twitter" (rank 2), ``Google" (rank 3), and ``YouTube" (rank 5) are companies that tweet readers show a general interest for, which seems reasonable. For the named entity ``Linked Data", this is probably due to the social Twitter environment of the author, but given the too small installation base is representative. The named entity ``glossary of graph theory" is definitely a false positive, as the underlying term was always ``successor". We have no explanation for the popularity of ``United States dollar", however, suppose that it is a correctly recognized, albeit relatively meaningless as out of context, named entity, as the underlying term was in all cases ``USD".
 
 \begin{table}[htb!]
 \begin{center}
@@ -228,16 +233,39 @@ Rank & Named Entity & Total Occurrences \\
 \end{table}
 
 \subsection{Tracking Of Named Entities Over Time}
-Using Google Analytics named entities (i.e., events in the sense of Google Analytics, as outlined in Section~\ref{sec:techimp}) can be easily tracked over time. Figure~\ref{fig:ipad} shows  the occurrences over time for the named entity ``iPad". Albeit the numbers are not statistically significant, the peak of interest is on March 2, the day where the iPad 2 was revealed, and the second highest peak is on March 1, the day before the announcement where media was atwitter with expectation of the device. The occurrence graph  indeed corresponds to what we would expect.
+Using Google Analytics, named entities (i.e., events in the sense of Google Analytics, as outlined in Section~\ref{sec:techimp}) can be easily tracked over time. As an example, Figure~\ref{fig:overtime-edge-a} shows  the occurrences over time for the named entity ``iPad". Albeit the numbers are not statistically significant, the peak of interest is on March 2, the day where the iPad 2 was revealed, and the second highest peak is on March 1, the day before the announcement, where media was atwitter with expectation of the device. Another example is given in Figure~\ref{fig:overtime-edge-b}, which shows the occurrences of the named entity ``tsunami". Japan was hit by an earthquake follwed by a tsunami on March 11, exactly where the peak is on the graph. The occurrence graphs indeed correspond to what we would expect.
 
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=0.9\linewidth]{ipad.png}
-  \caption{Popularity of the named entity ``iPad" (actually ``iPad 2") over time. The device was revealed on March 2, 2011.}
-  \label{fig:ipad}
+\begin{figure}[ht!]
+  \begin{center}
+    \subfigure[Popularity of the named entity ``iPad" (actually ``iPad 2") over time (February 24 - March 11). The device was revealed on March 2, 2011.]{\label{fig:overtime-edge-a}\includegraphics[width=0.9\linewidth]{ipad.png}}
+    \subfigure[Popularity of the named entity ``Tsunami" over time (March 10 - March 14). Japan was hit by an earthquake followed by a tsunami on March 11.]{\label{fig:overtime-edge-b}\includegraphics[width=0.9\linewidth]{tsunami.png}}
+  \end{center}
+  \caption{Popularity of named entities over time.}
+  \label{fig:overtime}
 \end{figure}
 
+\subsection{Top Read-about Named Entities Pivoted By Country}
+Japan was hit by an earthquake followed by a tsunami on March 11. As one would expect, this was reflected in the most read-about named entities for the period March 11 to March 14. The top 3 most read-about named entites for this period of time were ``tsunami" (8 occurrences), ``Japan" (7 occurrences), and ``earthquake" (4 occurrences). Table~\ref{table:pivotbycountry} shows the occurrences distribution pivoted by country. Again, our data set is too small to be statistically significant, however, the potential for this data to reveal new insights is promising. Given enough data, we could, e.g., provide an answer to the question whether among Twitter users the tsunami caused more interest in the American, or the European continent. As we use URIs as named entity identifiers, there is no ambiguity, and no language barriers. 
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{lllllllll}
+\hline
+Entity & Total & Germany & Finland & United States & Chile & India & Netherlands & Italy \\
+\hline
+\url{dbp:Tsunami} & 8 & 3 & 2 & 1 & 1 & 0 & 1 & 0 \\
+\url{dbp:Japan} & 7 & 2 & 3 & 1 & 0 & 0 & 0 & 1 \\
+\url{dbp:Earthquake} & 4 & 2 & 1 & 0 & 0 & 1 & 0 & 0 \\
+\hline \\
+\end{tabular}
+\end{center}
+\caption{Top 3 most read-about named entities (March 10 - March 14) pivoted by country, sorted by `Total". The prefix \texttt{dbp} stands for \texttt{http://dbpedia.org/resource}.}\label{table:pivotbycountry}
+\end{table}
+
 \subsection{Criticism Of the Approach}\label{sec:criticism}
+The quality of the extracted named entities from tweets rises and falls with the quality of the Natural Language Processing step. Not being in the domain of NLP ourselves, we try to address the uncertain quality by using several NLP services in parallel. We found the approach to work well, with only few false results. As outlined in Section~\ref{sec:techimp}, we always track the source and entity name in the \texttt{label} of the overloaded Analytics event, which allows us to go back from a named entity's representing URI to the originating terms, which oftentimes already permits to judge the quality of the named entity and its relevance.
+
+We found the biggest issue to be getting a critical mass of Twitter users to install the extension, in order to get more reliable data. We were very open in our extension description that data was tracked via Analytics, which might have caused privacy-aware users to stay away from it. Twitter itself uses Google Analytics (as per the Twitter.com source code with the account ID ``UA-30775-6"), which is stated in the privacy policy\footnote{\url{http://twitter.com/privacy}}, as required by the Google Analytics terms and conditions\footnote{\url{http://www.google.com/intl/en/analytics/tos.html}}. One could think of a similar approach for the extension. Currently the user base also is still biased by the authors' social structure (more people have found the extension via Twitter than via the Chrome Web Store, which is the primary discovery channel for Chrome extensions). From a user's point of view, this is also due to the extension's primary purpose (display extracted named entities in tweets), which apart from users interested in Semantic Web or NLP is not an appealling reason to install such extension. 
 
 \section{Related Work}\label{sec:relatedwork}
 As stated in Section~\ref{sec:introduction}, Twitter Trends is both an active field of academic and industry research, but also a playground for social media hobbyists. In the following we present four exemplary cases from both categories.
@@ -262,12 +290,14 @@ SMOB~\cite{Passant2008} by Passant et al. is a Semantic MicroBlogging framework 
 \subsection{Twopular}\label{sec:twopular}
 Twopular\footnote{\url{http://twopular.com/}} is an experiment by Martin Dudek with the objective of analyzing current Twitter trends. Therefore, for a given set of at the particular moment current trends the most recents tweets are obtained, and in an interval of five minutes run through the OpenCalais Web service in order find tags. By having tags for Twitter trends, another way of searching for trends -- and more importantly the possibility to interrelate trends based on tag similarity -- gets enabled. The author sees the feature more like a ``linguistic experiment"\footnote{\url{http://twopular.com/blog/?p=308}}, however states that the first results seem to be promising. In our tests of the service we could affirm the author's self-assessment, e.g., the Twitter trend (at the time of writing, March 7, 2011, 2PM CET) ``Prince Andrew" was mapped to the OpenCalais tag ``Prince Andrew, Duke of York", and related tags were, among others,  ``Sex offender registration", and ``X-Offender", where the story behind the trend was that people were tweeting about Prince Andrew of England, whose close friend was found to be a pedophile.
 
-\begin{figure}[h!]
+\begin{comment}
+\begin{figure}[ht!]
   \centering
   \includegraphics[width=0.85\linewidth]{twopular-trends.png}
   \caption{Screenshot of the Twopular trends page.}
   \label{fig:twopular}
 \end{figure}
+\end{comment}
 
 \section{Future Work And Conclusion}\label{sec:conclusion}
 In this paper, we have suggested a solution for obtaining a consumers' point of view on Twitter Trends. Rather than measuring the ``trendiness" of tweets being produced, we measure the ``trendiness" of tweets being consumed. This is not only interesting \textit{per se}, but together with the ``by-product" of classical Web analysis allows for even richer insights into, e.g., the location of users interested in a certain trend, where a trend in our understanding is a named entity that is popular on a freely configurable period of time.
