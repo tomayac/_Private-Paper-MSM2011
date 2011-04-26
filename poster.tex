@@ -60,15 +60,15 @@
 \maketitle
 
 \section{Introduction}\label{sec:introduction}
-Twitter Trends allows for a global or local view on ``what's happening in my world right now" from a tweet producers' point of view. In this paper, we show the possibility to complete Twitter Trends by having a closer look at the other side: the tweet consumers' point of view. While Twitter Trends works by analyzing the frequency of terms and their velocity of appearance in tweets being written, our approach is based on the popularity of extracted named entities in tweets being read.
+Twitter Trends allows for a global or local view on ``what's happening in my world right now" from a tweet producers' point of view. In this paper, we explore a way to complete Twitter Trends by having a closer look at the other side: the tweet consumers' point of view. While Twitter Trends works by analyzing the frequency of terms and their velocity of appearance in tweets being written, our approach is based on the popularity of extracted named entities in tweets being read.
  
 \section{Twitter Swarm NLP Extension}\label{sec:twitterswarm}
-We have developed a Google Chrome extension called Twitter Swarm NLP\footnote{\url{https://chrome.google.com/webstore/detail/dpbphenfafkflfmdlanimlemacankjol}} that injects JavaScript code into the Twitter.com homepage. The extension first checks if the user is logged in to Twitter.com, and if so, retrieves the tweets of the current user's timeline, search result page, or profile page on a one-by-one basis, and performs Named Entity Extraction (NEE) via Natural Language Processing (NLP) using a remote NLP Web service\footnote{\url{http://tomayac.no.de/entity-extraction/combined/{text_to_be_analyzed}}} on each of the tweets. The extracted entities are then displayed below each tweet, as can be seen in Figure \ref{fig:overtime-edge-a}, and finally are sent to Google Analytics to compute trends by pivoting the reported named entities by Google Analytics data, like users' geographic locations.
+We have developed a Google Chrome browser extension called Twitter Swarm NLP\footnote{\url{https://chrome.google.com/webstore/detail/dpbphenfafkflfmdlanimlemacankjol}} that injects JavaScript code into the Twitter.com homepage. The extension first checks if the user is logged in to Twitter.com, and if so, retrieves the tweets of the current user's timeline, search result page, or profile page, and performs named entity extraction via Natural Language Processing (NLP) using a remote NLP Web service\footnote{\url{http://tomayac.no.de/entity-extraction/combined/{text_to_be_analyzed}}} on each of the tweets. The extracted named entities are then displayed below each tweet, as can be seen in Figure \ref{fig:overtime-edge-a}. Finally the extracted named entities are sent to Google Analytics to compute trends by pivoting named entities by Analytics data, like users' geographic locations.
 
-\section{Evaluation}
+\section{Evaluation -- Raw Statistics}
 We examined the period from February 24 to March 11, 2011. The extension reached \textit{1,009 pageviews} as reported by Analytics, and had \textit{35 all-time users} and \textit{28 seven-day active users}. All in all, the extension has detected \textit{1,533 unique different named entities} in total. 
 
-Using Google Analytics, named entities can be easily tracked over time. As an example, Figure~\ref{fig:overtime-edge-a} shows  the occurrences over time for the named entity ``iPad". Albeit the numbers are not statistically significant, the peak of interest is on March 2, the day where the iPad 2 was revealed, and the second highest peak is on March 1, the day before the announcement, where media was atwitter with expectation of the device. Another example is given in Figure~\ref{fig:overtime-edge-b}, which shows the occurrences of the named entity ``tsunami". Japan was hit by an earthquake followed by a tsunami on March 11, exactly where the peak is on the graph. Hence, the occurrence graphs indeed correspond to what we would expect.
+Using Google Analytics, named entity occurrences can be easily tracked over time. As an example, Figure~\ref{fig:overtime-edge-b} shows the occurrences of the named entity ``tsunami". Japan was hit by an earthquake followed by a tsunami on March 11, exactly where the peak is on the graph. In general the occurrence graphs also for other examples indeed correspond to what we would expect, albeit the data is not statistically significant. One more example is ``iPad" with a peak on March 2, the release date of the iPad 2.
 
 \begin{figure}[htb!]
   \begin{center}
@@ -79,7 +79,8 @@ Using Google Analytics, named entities can be easily tracked over time. As an ex
   \label{fig:overtime}
 \end{figure}
 
-Japan was hit by an earthquake followed by a tsunami on March 11. As one would expect, this was reflected in the most read-about named entities for the period March 11 to March 14. Table~\ref{table:pivotbycountry} shows the occurrences distribution pivoted by country. Our data set is too small to be statistically significant, however, the potential for this data to reveal new insights is promising. Given enough data, we could, e.g., provide an answer to the question whether among Twitter users the tsunami caused more interest in the American, or the European continent. As we use URIs as named entity identifiers, there are no ambiguity, and no language barriers.
+\section{Evaluation -- Pivoting Named Entities By Country}
+Japan was hit by an earthquake followed by a tsunami on March 11. Table~\ref{table:pivotbycountry} shows the occurrences distribution pivoted by country. Our data set is too small to be statistically significant, however, the potential for this data to reveal new insights is promising. Given enough data, we could, for example, provide an answer to the question whether among Twitter users the tsunami caused more interest in the American, or the European continent. As we use URIs as named entity identifiers, there is no ambiguity, and no language barriers, as we compare named entities on the level of the representing URIs, which are language-independent.
 
 \begin{table}[htb!]
 \begin{center}
@@ -92,10 +93,11 @@ Entity & Total & Germany & Finland & United States & Chile & India & Netherlands
 \end{tabular}
 \end{center}
 \caption{The top named entity ``tsunami" (Mar. 10 - 14) pivoted by country.}
+\label{table:pivotbycountry}
 \end{table}
 
 \section{Conclusion}\label{sec:conclusion}
-In this paper, rather than measuring the ``trendiness" of terms/hashtags in tweets being produced, we measure the ``trendiness" of named entities in tweets being consumed using Google Analytics. This allows for even richer insights into, e.g., the location of users interested in a certain trend, sliceable back to any point (or period of time) in history where there is data available.
+In this paper, we measured the ``trendiness" of named entities in tweets being consumed using Google Analytics via an unobtrusive browser plug-in. This allows for even richer insights into, for example, the location of users interested in a certain named entity, sliceable back to any point (or period of time) in history where there is data available. This could be very attractive for market research.
 
 %%%%%%%%%%%%%%%%%%%%%%
 %%%  Bibliography  %%%
